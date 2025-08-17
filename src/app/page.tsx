@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: '遠藤羊太郎 - ソフトウェアエンジニア',
     description: 'React/Next.js、Pythonを専門とするソフトウェアエンジニア',
-    url: 'https://your-domain.com',
+    url: 'https://engineer-portfolio-nine.vercel.app/',
     siteName: '遠藤羊太郎 ポートフォリオ',
     locale: 'ja_JP',
     type: 'website',
@@ -21,7 +21,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: '遠藤羊太郎 - ソフトウェアエンジニア',
     description: 'React/Next.js、Pythonを専門とするソフトウェアエンジニア',
-    creator: '@your_twitter',
+    creator: '',
   },
   robots: {
     index: true,
