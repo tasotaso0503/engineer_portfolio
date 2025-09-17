@@ -18,6 +18,8 @@ jobs:
       # 1. リポジトリのコードをチェックアウトする
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+            fetch-depth: 0
 
       # 2. Node.jsの環境をセットアップする
       - name: Set up Node.js
