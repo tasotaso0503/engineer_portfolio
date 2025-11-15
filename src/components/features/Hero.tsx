@@ -1,81 +1,61 @@
 // src/components/features/Hero.tsx
-
 'use client'
 
-import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, ChevronDown, Menu, X, MapPin, Calendar } from 'lucide-react';
+import React from 'react';
+import { Mail, Github, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+// Contextフックをインポート
+import { usePortfolioContext } from '@/contexts/PortfolioContext';
 
-
-export default function Home() {
-  const [activeSection, setActiveSection] = useState('home');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(sectionId);
-      setIsMenuOpen(false);
-    }
-  };
+export default function Hero() {
+  // スクロール関数だけをContextから取得
+  const { scrollToSection } = usePortfolioContext();
 
   return (
-    <div>
-      {/* ヒーローセクション */}
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-slate-100">
-        <div className="text-center max-w-4xl mx-auto px-4">
-          <Avatar className="w-32 h-32 mx-auto mb-8">
-            <AvatarFallback className="bg-blue-600 text-white text-2xl font-bold">
-              遠藤
-            </AvatarFallback>
-          </Avatar>
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-slate-100">
+      <div className="text-center max-w-4xl mx-auto px-4">
+        <Avatar className="w-32 h-32 mx-auto mb-8">
+          <AvatarFallback className="bg-blue-600 text-white text-2xl font-bold">
+            遠藤
+          </AvatarFallback>
+        </Avatar>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-slate-800">
-            遠藤羊太郎
-          </h1>
-          <p className="text-xl md:text-2xl text-slate-600 mb-8">
-            ソフトウェアエンジニア
-          </p>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed mb-8">
-            モダンなWeb技術を使用してユーザー体験を向上させるアプリケーションを開発しています。
-            React/Next.js、Python、クラウド技術に特に興味があります。
-          </p>
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 text-slate-800">
+          遠藤羊太郎
+        </h1>
+        <p className="text-xl md:text-2xl text-slate-600 mb-8">
+          ソフトウェアエンジニア
+        </p>
+        <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed mb-8">
+          モダンなWeb技術を使用してユーザー体験を向上させるアプリケーションを開発しています。
+          React/Next.js、Python、クラウド技術に特に興味があります。
+        </p>
 
-          <div className="flex justify-center space-x-4 mb-12">
-            <Button className="rounded-full" onClick={() => scrollToSection("contact")}>
-              <Mail className="w-4 h-4 mr-2" />
-              連絡する
-            </Button>
+        {/* ボタンのロジックはContextから */}
+        <div className="flex justify-center space-x-4 mb-12">
+          <Button className="rounded-full" onClick={() => scrollToSection("contact")}>
+            <Mail className="w-4 h-4 mr-2" />
+            連絡する
+          </Button>
 
-            <Button variant="outline" className="rounded-full" onClick={() => scrollToSection("contact")}>
-              <Github className="w-4 h-4 mr-2" />
-              GitHub
-            </Button>
-            {/* <Button variant="outline" className="rounded-full">
-              <Linkedin className="w-4 h-4 mr-2" />
-              LinkedIn
-            </Button> */}
-          </div>
-
-          <button
-            onClick={() => scrollToSection('about')}
-            className="animate-bounce text-blue-600"
-          >
-            <ChevronDown className="w-8 h-8" />
-          </button>
+          <Button variant="outline" className="rounded-full" onClick={() => scrollToSection("contact")}>
+            <Github className="w-4 h-4 mr-2" />
+            GitHub
+          </Button>
+          {/* <Button variant="outline" className="rounded-full">
+            <Linkedin className="w-4 h-4 mr-2" />
+            LinkedIn
+          </Button> */}
         </div>
-      </section>
-    </div>
+
+        <button
+          onClick={() => scrollToSection('about')}
+          className="animate-bounce text-blue-600"
+        >
+          <ChevronDown className="w-8 h-8" />
+        </button>
+      </div>
+    </section>
   );
 };
