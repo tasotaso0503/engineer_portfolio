@@ -22,8 +22,7 @@ export default function Hero() {
         </Avatar> */}
 
         <Avatar className="w-32 h-32 mx-auto mb-8">
-          {/* /public/images/profile.jpg に画像を置いたと仮定 */}
-          <AvatarImage src="/images/profile.jpg" alt="遠藤羊太郎 プロフィール画像" />
+          <AvatarImage src="/images/icon_dog.jpg" alt="遠藤羊太郎 プロフィール画像" />
           <AvatarFallback className="bg-blue-600 text-white text-2xl font-bold">
             遠藤
           </AvatarFallback>
@@ -36,8 +35,8 @@ export default function Hero() {
           ソフトウェアエンジニア
         </p>
         <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed mb-8">
-          モダンなWeb技術を使用してユーザー体験を向上させるアプリケーションを開発しています。
-          React/Next.js、Python、クラウド技術に特に興味があります。
+          モダンなWeb技術を使用してユーザーにとって価値あるアプリケーション / システムを設計開発しています。
+          生成AIを活用した作業の効率化に特に興味があります。
         </p>
 
         {/* ボタンのロジックはContextから */}

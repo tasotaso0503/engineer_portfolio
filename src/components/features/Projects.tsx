@@ -8,21 +8,27 @@ import { Github, ExternalLink } from 'lucide-react';
 const projects = [
   {
     title: '企業用社内チャットbot',
-    description: 'Flask, LangChainを使用した社内用チャットbotアプリ。RAGの諸機能、社内用資料の管理機能を実装し、業務効率化を実現。',
+    description: '社内規則などの煩雑な資料の確認をRAGを活用したチャットbot機能で半自動化し、効率化を実現。社内の部署や従業員ごとにアクセスできる資料に制限を儲けたりなどの設定をすることが可能。',
     tech: ['Flask', 'LangChain', 'PostgreSQL', 'Heroku'],
-    image: 'https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Ecommerce+App'
-  },
-  {
-    title: '頭痛患者 / 医者用アプリ',
-    description: 'FastAPI、Next.js、Lambdaを使用したサーバーレスウェブアプリ。SSR, CSRを活用してUX向上に貢献。バックエンドのAPIと連携し、ユーザー認証やチャット機能、カレンダー機能、天候情報の表示機能などを実装。',
-    tech: ['FastAPI、Next', 'Next.js', 'PostgreSQL', 'Lambda', 'Vercel'],
-    image: 'https://via.placeholder.com/400x250/10B981/FFFFFF?text=Task+Manager'
+    image: '/images/chachat.png'
   },
   {
     title: '大学教授用チャットbot',
-    description: 'Flask, LangChainを使用した大学教授用チャットbotアプリ。RAGの機能によって、「助成金申請書作成」をサポートし、研究時間の最大化を実現。',
+    description: '大学教授の助成金申請に関する煩雑な業務をRAGを活用したチャットbotとの対話によって半自動化し、効率化を実現。ファイルのダウンロードなどの管理機能も提供。',
     tech: ['Flask', 'LangChain', 'PostgreSQL', 'Heroku'],
-    image: 'https://via.placeholder.com/400x250/8B5CF6/FFFFFF?text=Data+Dashboard'
+    image: '/images/chachat.png'
+  },
+  {
+    title: '頭痛患者 / 医者用アプリ',
+    description: 'カレンダー機能、AIとのチャット機能によって頭痛患者の日々の頭痛に関する記録を取り、それを基に月次のレポートを作成し、頭痛の誘発原因を突き止める。医者側は自身の患者のレポートなどの情報を閲覧でき、診療時に利用できる。',
+    tech: ['FastAPI', 'LangChain', 'Next.js', 'PostgreSQL', 'Lambda', 'API Gateway', 'Vercel'],
+    image: '/images/headache_app.png'
+  },
+  {
+    title: '鉄道信号業界向けシステム構築',
+    description: 'データを一元管理できるようなデータベースの提供。生成AIの技術を利用し、社内の再発防止策を対話形式で検索・活用するチャット機能やデータ内容に関するレポート作成機能を実装。',
+    tech: ['Django', 'LangChain', 'LangGraph', 'PostgreSQL', 'App Runner'],
+    image: '/images/train.png'
   }
 ];
 

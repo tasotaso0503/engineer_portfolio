@@ -1,11 +1,9 @@
-name: CI # ワークフローの名前
+name: Build # ワークフローの名前
 
 # 実行するきっかけ（トリガー）
 on:
   push:
     branches: [ main ] # mainブランチにプッシュされた時
-  pull_request:
-    branches: [ main ] # mainブランチへのプルリクエストが作られた時
 
 # 実行する処理（ジョブ）
 jobs:
@@ -33,4 +31,4 @@ jobs:
 
       # 4. ビルドを実行して、成功するか確認する
       - name: Build project
-        run: npm run build # もしビルドコマンドが違えば修正
+        run: npm run build

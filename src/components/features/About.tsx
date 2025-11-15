@@ -1,6 +1,14 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Globe, Database, Code } from 'lucide-react';
+import {
+  Monitor,
+  Server,
+  Cloud,
+  Database,
+  LineChart,
+  Palette,
+} from 'lucide-react';
+
 
 export default function About() {
   return (
@@ -12,12 +20,16 @@ export default function About() {
             <h3 className="text-2xl font-semibold mb-6 text-slate-800">エンジニアとしての歩み</h3>
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                大学でコンピュータサイエンスを学び、2024年からWeb開発の世界に足を踏み入れました。
-                最初はHTML/CSSから始まり、現在はReact/Next.js、Python、クラウド技術を中心に開発を行っています。
+                コンピュータサイエンスやWeb開発を独学で学び、2024年からエンジニアとして業務を開始しました。
+                バックエンドのエンジニアとして業務を開始し、現在は要件抽出、設計、フロントエンド・バックエンドの開発、インフラの構築を中心に業
+                務を行っています。
               </p>
               <p>
-                ユーザーに価値を提供するプロダクト作りに情熱を持ち、フロントエンドからバックエンドまで
-                幅広い技術を学び続けています。特にパフォーマンス最適化とユーザー体験の向上に力を入れています。
+                ユーザーに価値を提供するプロダクト作りに情熱を持ち、フロントエンドからインフラまで幅広い技術を学び続けています。
+                特に生成AIに大きな可能性を感じ、生成AIを活用し従来の煩雑な作業の効率化や全く新しい価値を提供することに情熱を持っています。
+              </p>
+              <p>
+                最近では、パフォーマンス最適化やユーザー体験の向上についての学習を中心に行なっています。
               </p>
               {/* <p>
                 趣味はオープンソースプロジェクトへの貢献と新しい技術の学習です。
@@ -33,27 +45,27 @@ export default function About() {
               <CardContent>
                 <ul className="space-y-3 text-slate-600">
                   <li className="flex items-center">
-                    <Globe className="w-4 h-4 mr-3 text-blue-500" />
-                    フロントエンド開発（React/Next.js）
+                    <Monitor className="w-4 h-4 mr-3 text-blue-500" />
+                    フロントエンド開発
                   </li>
                   <li className="flex items-center">
-                    <Database className="w-4 h-4 mr-3 text-blue-500" />
-                    バックエンド開発（Node.js/Python）
+                    <Server className="w-4 h-4 mr-3 text-blue-500" />
+                    バックエンド開発
                   </li>
                   <li className="flex items-center">
-                    <Globe className="w-4 h-4 mr-3 text-blue-500" />
-                    クラウドインフラ（AWS）
+                    <Cloud className="w-4 h-4 mr-3 text-blue-500" />
+                    クラウドインフラ
                   </li>
                   <li className="flex items-center">
                     <Database className="w-4 h-4 mr-3 text-blue-500" />
                     データベース設計
                   </li>
                   <li className="flex items-center">
-                    <Database className="w-4 h-4 mr-3 text-blue-500" />
+                    <LineChart className="w-4 h-4 mr-3 text-blue-500" />
                     データサイエンス
                   </li>
                   <li className="flex items-center">
-                    <Code className="w-4 h-4 mr-3 text-blue-500" />
+                    <Palette className="w-4 h-4 mr-3 text-blue-500" />
                     UI/UXデザイン
                   </li>
                 </ul>
@@ -67,7 +79,7 @@ export default function About() {
               <CardContent>
                 <ul className="space-y-2 text-slate-600">
                   <li>• 東京科学大学 (旧 東京工業大学) 理学院地球惑星科学系 在学中</li>
-                  {/* <li>• 基本情報技術者試験 合格</li> */}
+                  <li>• 基本情報技術者試験 合格</li>
                   <li>• 統計検定1級「統計統計」 取得</li>
                   <li>• 数学検定準1級 取得</li>
                 </ul>
