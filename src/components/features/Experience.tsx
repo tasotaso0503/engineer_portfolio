@@ -2,21 +2,21 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, MapPin } from 'lucide-react';
 
-// page.tsxから渡されるexperienceデータの型を定義
-type Experience = {
-  title: string;
-  company: string;
-  period: string;
-  location: string;
-  description: string[];
-};
+const experiences = [
+  {
+    title: 'ソフトウェアエンジニア',
+    company: '株式会社NNN',
+    period: '2024.09 - 現在',
+    location: '東京',
+    description: [
+      '様々なPythonフレームワークやReact/Next.jsを使用したWebアプリケーションの設計・開発',
+      'AWSやVercel、Herokuなどのクラウドプラットフォームの構築・運用',
+      'クライアントへのヒアリングによる要件抽出も担当'
+    ]
+  }
+];
 
-// Experienceコンポーネントが受け取るpropsの型を定義
-interface ExperienceProps {
-  experiences: Experience[];
-}
-
-export default function Experience({ experiences }: ExperienceProps) {
+export default function Experience() {
   return (
     <section id="experience" className="py-20 bg-slate-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

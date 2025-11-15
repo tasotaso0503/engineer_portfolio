@@ -4,22 +4,29 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
 
-// page.tsxから渡されるprojectデータの型を定義
-type Project = {
-  title: string;
-  description: string;
-  tech: string[];
-  image: string;
-  // github?: string; // 元のコードにならってコメントアウト
-  // demo?: string;
-};
 
-// Projectsコンポーネントが受け取るpropsの型を定義
-interface ProjectsProps {
-  projects: Project[];
-}
+const projects = [
+  {
+    title: '企業用社内チャットbot',
+    description: 'Flask, LangChainを使用した社内用チャットbotアプリ。RAGの諸機能、社内用資料の管理機能を実装し、業務効率化を実現。',
+    tech: ['Flask', 'LangChain', 'PostgreSQL', 'Heroku'],
+    image: 'https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Ecommerce+App'
+  },
+  {
+    title: '頭痛患者 / 医者用アプリ',
+    description: 'FastAPI、Next.js、Lambdaを使用したサーバーレスウェブアプリ。SSR, CSRを活用してUX向上に貢献。バックエンドのAPIと連携し、ユーザー認証やチャット機能、カレンダー機能、天候情報の表示機能などを実装。',
+    tech: ['FastAPI、Next', 'Next.js', 'PostgreSQL', 'Lambda', 'Vercel'],
+    image: 'https://via.placeholder.com/400x250/10B981/FFFFFF?text=Task+Manager'
+  },
+  {
+    title: '大学教授用チャットbot',
+    description: 'Flask, LangChainを使用した大学教授用チャットbotアプリ。RAGの機能によって、「助成金申請書作成」をサポートし、研究時間の最大化を実現。',
+    tech: ['Flask', 'LangChain', 'PostgreSQL', 'Heroku'],
+    image: 'https://via.placeholder.com/400x250/8B5CF6/FFFFFF?text=Data+Dashboard'
+  }
+];
 
-export default function Projects({ projects }: ProjectsProps) {
+export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

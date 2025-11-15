@@ -1,20 +1,18 @@
 import React from 'react';
+import { Github, Mail, Code, Database, Globe, MapPin, Calendar, ExternalLink } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 
-// page.tsxから渡されるskillsデータの型を定義
-type Skill = {
-  name: string;
-  level: number;
-  icon: React.ReactNode; // アイコンはReact要素として受け取る
-};
+const skills = [
+  { name: 'React/Next.js', level: 90, icon: <Globe className="w-5 h-5" /> },
+  { name: 'TypeScript', level: 85, icon: <Code className="w-5 h-5" /> },
+  { name: 'HTML/CSS', level: 80, icon: <Database className="w-5 h-5" /> },
+  { name: 'Python', level: 75, icon: <Code className="w-5 h-5" /> },
+  { name: 'PostgreSQL', level: 70, icon: <Database className="w-5 h-5" /> },
+  { name: 'AWS', level: 65, icon: <Globe className="w-5 h-5" /> }
+];
 
-// Skillsコンポーネントが受け取るpropsの型を定義
-interface SkillsProps {
-  skills: Skill[];
-}
-
-export default function Skills({ skills }: SkillsProps) {
+export default function Skills() {
   return (
     <section id="skills" className="py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
