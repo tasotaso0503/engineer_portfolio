@@ -1,34 +1,29 @@
-name: Build # ワークフローの名前
+name: Build and Lint
 
-# 実行するきっかけ（トリガー）
 on:
   push:
-    branches: [ main ] # mainブランチにプッシュされた時
+    branches: [ main ]
 
-# 実行する処理（ジョブ）
 jobs:
-  build:
-    # 実行環境
+  build-and-lint:
     runs-on: ubuntu-latest
 
-    # 処理のステップ
     steps:
-      # 1. リポジトリのコードをチェックアウトする
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
             fetch-depth: 0
 
-      # 2. Node.jsの環境をセットアップする
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # プロジェクトで使っているバージョンを指定
+          node-version: '20'
 
-      # 3. 依存パッケージをインストールする
       - name: Install dependencies
-        run: npm install # yarnの場合は yarn install
+        run: npm install
 
-      # 4. ビルドを実行して、成功するか確認する
+      - name: Lint project
+        run: npm run lint
+
       - name: Build project
         run: npm run build

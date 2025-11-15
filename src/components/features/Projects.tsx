@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Github, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+// import { Button } from '@/components/ui/button';
 
 
 const projects = [
@@ -40,11 +40,16 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
+              <div className="relative w-full h-48"> {/* 画像をコンテナで囲む */}
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  layout="fill" // コンテナいっぱいに広げる
+                  objectFit="cover" // 元の object-cover と同じ
+                  className="w-full h-48 object-cover" // classNameは残しても良い
+                />
+              </div>
+
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-3 text-slate-800">{project.title}</h3>
                 <p className="text-slate-600 mb-4 text-sm leading-relaxed">

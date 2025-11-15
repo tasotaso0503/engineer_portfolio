@@ -5,15 +5,15 @@ import { Calendar, MapPin } from 'lucide-react';
 const experiences = [
   {
     title: 'ソフトウェアエンジニア',
-    company: '株式会社NNN',
+    company: 'NNN株式会社',
     period: '2024.09 - 現在',
     location: '東京',
     description: [
-      '様々なPythonフレームワークやReact/Next.jsを使用したWebアプリケーションの設計・開発',
-      'AWSやVercel、Herokuなどのクラウドプラットフォームの構築・運用',
-      'クライアントへのヒアリングによる要件抽出も担当'
+      '様々なWebフレームワークを使用したWebアプリケーションの設計・開発',
+      'AWSやVercel、Herokuなどのクラウドインフラの構築・運用',
+      'クライアントへのヒアリングによる要件抽出や営業'
     ]
-  }
+  },
 ];
 
 export default function Experience() {
