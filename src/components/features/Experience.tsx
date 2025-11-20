@@ -14,6 +14,17 @@ const experiences = [
       'クライアントへのヒアリングによる要件抽出や営業'
     ]
   },
+  {
+    title: 'SEO/AIOエンジニア',
+    company: '有限会社Pick1',
+    period: '2025.11 - 現在',
+    location: '東京',
+    description: [
+      'テクニカル実装・内部構造の最適化',
+      'データ分析・戦略立案',
+      'コンテンツ最適化・AI活用'
+    ]
+  },
 ];
 
 export default function Experience() {
