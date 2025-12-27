@@ -60,7 +60,7 @@ const skillCategories = [
     skills: [
       {
         name: 'AWS',
-        description: 'EC2, S3, RDS, Lambda, VPCなど基本的なサービスを組み合わせたインフラ構築・運用経験があります。',
+        description: 'EC2, S3, RDS, App Runner, Lambdaなど基本的なサービスを組み合わせたインフラ設計・構築の実務経験があります。',
         icon: <Cloud className="w-6 h-6" />
       },
       {

@@ -2,7 +2,8 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-// import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
+import { Github } from 'lucide-react';
 
 
 const projects = [
@@ -29,7 +30,14 @@ const projects = [
     description: 'データを一元管理できるようなデータベースの提供。生成AIの技術を利用し、社内の再発防止策を対話形式で検索・活用するチャット機能やデータ内容に関するレポート作成機能を実装。',
     tech: ['Django', 'LangChain', 'LangGraph', 'PostgreSQL', 'App Runner'],
     image: '/images/train.png'
-  }
+  },
+  {
+    title: 'AI Agent統合型 自作バージョン管理システム',
+    description: '簡易的なGitをPythonで再現し、LangGraphを用いたAIコードレビュー機能を統合。コミット時にローカルLLM（Ollama）が差分を解析し、論理バグを検知した場合はコミットを自動的に拒絶するガードレール機能を実装。',
+    tech: ['Python', 'LangGraph', 'Ollama', 'Pydantic', 'Git'],
+    image: '/images/langgraph_git.png',
+    githubUrl: 'https://github.com/tasotaso0503/langgraph-git'
+  },
 ];
 
 export default function Projects() {
@@ -44,9 +52,9 @@ export default function Projects() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  layout="fill" // コンテナいっぱいに広げる
-                  objectFit="cover" // 元の object-cover と同じ
-                  className="w-full h-48 object-cover" // classNameは残しても良い
+                  fill
+                  style={{ objectFit: 'cover' }} // objectFit="cover" の代わり
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
 
@@ -62,16 +70,16 @@ export default function Projects() {
                     </Badge>
                   ))}
                 </div>
-                {/* <div className="flex space-x-4">
-                  <Button variant="ghost" size="sm">
-                    <Github className="w-4 h-4 mr-1" />
-                    GitHub
-                  </Button>
-                  <Button variant="ghost" size="sm">
-                    <ExternalLink className="w-4 h-4 mr-1" />
-                    Demo
-                  </Button>
-                </div> */}
+                <div className="flex space-x-3 mt-auto">
+                  {project.githubUrl && (
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
+                      </a>
+                    </Button>
+                  )}
+                </div>
               </CardContent>
             </Card>
           ))}
