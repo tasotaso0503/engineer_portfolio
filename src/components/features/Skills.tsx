@@ -11,6 +11,7 @@ import {
   Container,
   Github,
   Workflow,
+  Mountain,
 } from 'lucide-react';
 
 // スキルデータ
@@ -44,13 +45,13 @@ const skillCategories = [
         icon: <Server className="w-6 h-6" />
       },
       {
-        name: 'PHP',
-        description: 'HPのフォーム処理や自動メール送信機能などを実装。',
+        name: 'Node.js（Express.js, NestJS）',
+        description: 'LangGraphを用いたAgent開発やAPI開発の経験があります。',
         icon: <Server className="w-6 h-6" />
       },
       {
         name: 'Go (Gin)',
-        description: '実務の開発で使用予定。',
+        description: 'API開発や並行処理などの個人開発経験あり。求人サイトの実装で使用予定です。',
         icon: <Server className="w-6 h-6" />
       },
     ],
@@ -65,12 +66,12 @@ const skillCategories = [
       },
       {
         name: 'Vercel',
-        description: 'コンテナ化による開発環境の統一や、各種PaaS/IaaSへのデプロイ・CI/CDパイプライン構築が可能です。',
+        description: 'RedisやEdge Configなどの各種設定やデプロイ・CI/CDパイプライン構築が可能です。',
         icon: <Cloud className="w-6 h-6" />
       },
       {
         name: 'Heroku',
-        description: 'コンテナ化による開発環境の統一や、各種PaaS/IaaSへのデプロイ・CI/CDパイプライン構築が可能です。',
+        description: '各種PaaS/IaaSへのデプロイ・CI/CDパイプライン構築が可能です。',
         icon: <Cloud className="w-6 h-6" />
       }
     ]
@@ -112,6 +113,11 @@ const skillCategories = [
         name: 'GitHub Actions',
         description: '基本的なコマンド操作とGUI上からの操作が可能。',
         icon: <Workflow className="w-6 h-6" />
+      },
+      {
+        name: 'Terraform',
+        description: '基本的なコード記述やコマンド操作が可能。',
+        icon: <Mountain className="w-6 h-6" />
       },
     ]
   }

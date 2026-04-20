@@ -25,6 +25,17 @@ const experiences = [
       'コンテンツ最適化・AI活用'
     ]
   },
+  {
+    title: 'PM / PdM / ソフトウェアエンジニア',
+    company: '株式会社Gappy',
+    period: '2026.4 - 現在',
+    location: '東京',
+    description: [
+      'プロダクトマネジメント支援',
+      'コミュニケーション管理・運用支援',
+      'プロジェクトマネジメント補助'
+    ]
+  },
 ];
 
 export default function Experience() {

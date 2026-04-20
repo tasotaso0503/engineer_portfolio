@@ -2,7 +2,7 @@
 'use client'
 
 import React from 'react';
-import { Mail, Github, ChevronDown } from 'lucide-react';
+import { Mail, Github, ChevronDown, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 // Contextフックをインポート
@@ -15,12 +15,6 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-slate-100">
       <div className="text-center max-w-4xl mx-auto px-4">
-        {/* <Avatar className="w-32 h-32 mx-auto mb-8">
-          <AvatarFallback className="bg-blue-600 text-white text-2xl font-bold">
-            遠藤
-          </AvatarFallback>
-        </Avatar> */}
-
         <Avatar className="w-32 h-32 mx-auto mb-8">
           <AvatarImage src="/images/icon_dog.jpg" alt="遠藤羊太郎 プロフィール画像" />
           <AvatarFallback className="bg-blue-600 text-white text-2xl font-bold">
@@ -50,10 +44,10 @@ export default function Hero() {
             <Github className="w-4 h-4 mr-2" />
             GitHub
           </Button>
-          {/* <Button variant="outline" className="rounded-full">
+          <Button variant="outline" className="rounded-full" onClick={() => scrollToSection("contact")}>
             <Linkedin className="w-4 h-4 mr-2" />
             LinkedIn
-          </Button> */}
+          </Button>
         </div>
 
         <button

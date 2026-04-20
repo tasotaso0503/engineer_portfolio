@@ -1,12 +1,6 @@
-
-
-
 import React from 'react';
 
-// Context Provider (クライアントコンポーネント)
 import PortfolioProvider from '@/contexts/PortfolioContext';
-
-// 分割したフィーチャーコンポーネント (default export)
 import Header from '@/components/features/Header';
 import Hero from '@/components/features/Hero';
 import About from '@/components/features/About';
@@ -44,7 +38,7 @@ export const metadata = {
 }
 
 
-// メインのページコンポーネント (サーバーコンポーネント)
+// メインのページコンポーネント
 export default function Home() {
   return (
     // Providerでページ全体を囲み、クライアントコンポーネント（Header, Hero）が

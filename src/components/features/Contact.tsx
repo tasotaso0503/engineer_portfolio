@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import {
 Mail,
 Github,
-// Linkedin
+Linkedin
 } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
 
@@ -16,7 +16,7 @@ export default function Contact() {
           新しいプロジェクトや協業の機会について、お気軽にご連絡ください。
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           <Card className="text-center hover:shadow-lg transition-shadow">
             <CardContent className="p-6">
               <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
@@ -36,22 +36,22 @@ export default function Contact() {
               </div>
               <h3 className="text-lg font-semibold mb-2 text-slate-800">GitHub</h3>
               <a href="https://github.com/tasotaso0503" className="text-blue-600 hover:text-blue-700">
-                  github.com/tasotaso0503
+                github.com/tasotaso0503
               </a>
             </CardContent>
           </Card>
 
-          {/* <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-lg transition-shadow">
             <CardContent className="p-6">
               <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
                 <Linkedin className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2 text-slate-800">LinkedIn</h3>
-              <a href="https://linkedin.com/in/yamada" className="text-blue-600 hover:text-blue-700">
-                linkedin.com/in/yamada
+              <a href="https://www.linkedin.com/in/羊太郎-遠藤-a6b984389" className="text-blue-600 hover:text-blue-700">
+                https://www.linkedin.com/in/羊太郎-遠藤-a6b984389
               </a>
             </CardContent>
-          </Card> */}
+          </Card>
         </div>
 
         {/* <Button size="lg" className="rounded-full">

@@ -22,7 +22,7 @@ const projects = [
   {
     title: '頭痛患者 / 医者用アプリ',
     description: 'カレンダー機能、AIとのチャット機能によって頭痛患者の日々の頭痛に関する記録を取り、それを基に月次のレポートを作成し、頭痛の誘発原因を突き止める。医者側は自身の患者のレポートなどの情報を閲覧でき、診療時に利用できる。',
-    tech: ['FastAPI', 'LangChain', 'Next.js', 'PostgreSQL', 'Lambda', 'API Gateway', 'Vercel'],
+    tech: ['FastAPI', 'LangChain', 'Next.js', 'PostgreSQL', 'Lambda', 'Terraform', 'Vercel'],
     image: '/images/headache_app.png'
   },
   {
@@ -32,11 +32,24 @@ const projects = [
     image: '/images/train.png'
   },
   {
-    title: 'AI Agent統合型 自作バージョン管理システム',
+    title: 'AI Agent統合型 バージョン管理システム',
     description: '簡易的なGitをPythonで再現し、LangGraphを用いたAIコードレビュー機能を統合。コミット時にローカルLLM（Ollama）が差分を解析し、論理バグを検知した場合はコミットを自動的に拒絶するガードレール機能を実装。',
     tech: ['Python', 'LangGraph', 'Ollama', 'Pydantic', 'Git'],
     image: '/images/langgraph_git.png',
     githubUrl: 'https://github.com/tasotaso0503/langgraph-git'
+  },
+  {
+    title: 'エンジニア向け生成AI講習会',
+    description: '東証プライム上場企業のエンジニア向けに、生成AIに関する講習会の講師を務めた。生成AIについての概要や開発の現場にどのように取り入れるのかの説明、AgentやMCPサーバーの内部的な仕組みや実装方法のハンズオンなどを行なった。',
+    tech: ['Python', 'LangChain', 'GitHub Copilot', 'AWS', 'Terraform'],
+    image: '/images/genai_seminar.png',
+  },
+  {
+    title: 'エンジニア向けタイピング練習アプリ',
+    description: '言語やフレームワークを選択し、コードのお題をプロンプトとして入力すると、LLMがタイピング練習用のコードを生成し、アプリ内のエディタ部分でタイピング練習ができる機能を実装',
+    tech: ['Nuxt.js', 'LangGraph', 'Groq', 'Gemini', 'Redis', 'Vercel'],
+    image: '/images/genai_typing.png',
+    githubUrl: 'https://github.com/tasotaso0503/genai_typing'
   },
 ];
 

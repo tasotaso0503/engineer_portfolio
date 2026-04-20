@@ -5,7 +5,9 @@ import { get } from '@vercel/edge-config'; // インポートを追加
 export async function middleware(req: NextRequest) {
   // Edge Config から値を取得
   // キャッシュが効くため、非常に高速に動作します
-  const isInMaintenanceMode = await get<boolean>('isInMaintenanceMode');
+  const isInMaintenanceMode = process.env.EDGE_CONFIG
+    ? await get<boolean>('isInMaintenanceMode')
+    : false;
 
   const isMaintenancePage = req.nextUrl.pathname === '/maintenance';
 
