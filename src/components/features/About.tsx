@@ -14,7 +14,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-16 text-slate-800">自己紹介</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-900 via-sky-700 to-blue-700 bg-clip-text text-transparent">自己紹介</h2>
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h3 className="text-2xl font-semibold mb-6 text-slate-800">エンジニアとしての歩み</h3>
@@ -37,43 +37,43 @@ export default function About() {
             </div>
           </div>
           <div className="space-y-6">
-            <Card>
+            <Card className="border-slate-200/70 shadow-sm shadow-sky-500/5 hover:shadow-md hover:shadow-sky-500/10 transition-shadow">
               <CardHeader>
-                <CardTitle className="text-blue-600 text-lg">興味のある分野</CardTitle>
+                <CardTitle className="text-sky-600 text-lg">興味のある分野</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 text-slate-600">
                   <li className="flex items-center">
-                    <Monitor className="w-4 h-4 mr-3 text-blue-500" />
+                    <Monitor className="w-4 h-4 mr-3 text-sky-500" />
                     フロントエンド開発
                   </li>
                   <li className="flex items-center">
-                    <Server className="w-4 h-4 mr-3 text-blue-500" />
+                    <Server className="w-4 h-4 mr-3 text-sky-500" />
                     バックエンド開発
                   </li>
                   <li className="flex items-center">
-                    <Cloud className="w-4 h-4 mr-3 text-blue-500" />
+                    <Cloud className="w-4 h-4 mr-3 text-sky-500" />
                     クラウドインフラ
                   </li>
                   <li className="flex items-center">
-                    <Database className="w-4 h-4 mr-3 text-blue-500" />
+                    <Database className="w-4 h-4 mr-3 text-sky-500" />
                     データベース設計
                   </li>
                   <li className="flex items-center">
-                    <LineChart className="w-4 h-4 mr-3 text-blue-500" />
+                    <LineChart className="w-4 h-4 mr-3 text-sky-500" />
                     データサイエンス
                   </li>
                   <li className="flex items-center">
-                    <Palette className="w-4 h-4 mr-3 text-blue-500" />
+                    <Palette className="w-4 h-4 mr-3 text-sky-500" />
                     UI/UXデザイン
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border-slate-200/70 shadow-sm shadow-sky-500/5 hover:shadow-md hover:shadow-sky-500/10 transition-shadow">
               <CardHeader>
-                <CardTitle className="text-blue-600 text-lg">学歴・資格</CardTitle>
+                <CardTitle className="text-sky-600 text-lg">学歴・資格</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-slate-600">

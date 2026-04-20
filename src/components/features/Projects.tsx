@@ -49,7 +49,7 @@ const projects = [
     description: '言語やフレームワークを選択し、コードのお題をプロンプトとして入力すると、LLMがタイピング練習用のコードを生成し、アプリ内のエディタ部分でタイピング練習ができる機能を実装',
     tech: ['Nuxt.js', 'LangGraph', 'Groq', 'Gemini', 'Redis', 'Vercel'],
     image: '/images/genai_typing.png',
-    githubUrl: 'https://github.com/tasotaso0503/genai_typing'
+    githubUrl: 'https://github.com/tasotaso0503/genai-typing'
   },
 ];
 
@@ -57,10 +57,10 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-16 text-slate-800">プロジェクト</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-900 via-sky-700 to-blue-700 bg-clip-text text-transparent">プロジェクト</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <Card key={index} className="overflow-hidden border-slate-200/70 shadow-sm hover:shadow-2xl hover:shadow-sky-500/10 transition-all duration-300 hover:-translate-y-1">
               <div className="relative w-full h-48"> {/* 画像をコンテナで囲む */}
                 <Image
                   src={project.image}
@@ -78,7 +78,11 @@ export default function Projects() {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary">
+                    <Badge
+                      key={techIndex}
+                      variant="secondary"
+                      className="bg-sky-50 text-sky-700 hover:bg-sky-100 border border-sky-100"
+                    >
                       {tech}
                     </Badge>
                   ))}

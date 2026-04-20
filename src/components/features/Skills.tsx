@@ -126,12 +126,12 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-slate-50">
+    <section id="skills" className="py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* セクションタイトル */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-slate-800">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-slate-900 via-sky-700 to-blue-700 bg-clip-text text-transparent">
             スキル
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -153,10 +153,10 @@ export default function Skills() {
               {/* スキルカードのグリッド */}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {categoryGroup.skills.map((skill, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow flex flex-col">
+                  <Card key={index} className="border-slate-200/70 shadow-sm hover:shadow-xl hover:shadow-sky-500/10 hover:-translate-y-0.5 transition-all duration-300 flex flex-col">
                     <CardHeader>
                       <div className="flex items-center gap-4">
-                        <div className="p-3 bg-blue-100 rounded-full text-blue-600">
+                        <div className="p-3 rounded-full bg-gradient-to-br from-sky-100 to-blue-100 text-sky-600 ring-1 ring-sky-200/60">
                           {skill.icon}
                         </div>
                         <CardTitle className="text-lg font-semibold text-slate-800">{skill.name}</CardTitle>

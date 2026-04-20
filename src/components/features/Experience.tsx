@@ -40,16 +40,16 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-slate-50">
+    <section id="experience" className="py-20 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-16 text-slate-800">職歴</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-900 via-sky-700 to-blue-700 bg-clip-text text-transparent">職歴</h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="border-slate-200/70 shadow-sm hover:shadow-lg hover:shadow-sky-500/10 transition-shadow">
               <CardContent className="p-6">
                 <div className="md:flex md:justify-between md:items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-blue-600 mb-1">{exp.title}</h3>
+                    <h3 className="text-xl font-semibold mb-1 bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">{exp.title}</h3>
                     <p className="text-slate-700 font-medium">{exp.company}</p>
                   </div>
                   <div className="text-slate-500 text-sm mt-2 md:mt-0">
@@ -66,7 +66,7 @@ export default function Experience() {
                 <ul className="space-y-2">
                   {exp.description.map((desc, descIndex) => (
                     <li key={descIndex} className="text-slate-600 flex items-start">
-                      <span className="text-blue-500 mr-2 font-bold">•</span>
+                      <span className="text-sky-500 mr-2 font-bold">•</span>
                       {desc}
                     </li>
                   ))}
