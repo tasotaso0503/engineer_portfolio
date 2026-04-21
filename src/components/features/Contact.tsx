@@ -47,8 +47,8 @@ export default function Contact() {
                 <Linkedin className="w-8 h-8 text-sky-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2 text-slate-800">LinkedIn</h3>
-              <a href="https://www.linkedin.com/in/羊太郎-遠藤-a6b984389" className="text-sky-600 hover:text-blue-600 transition-colors break-all">
-                https://www.linkedin.com/in/羊太郎-遠藤-a6b984389
+              <a href="https://www.linkedin.com/in/endo-yotaro" className="text-sky-600 hover:text-blue-600 transition-colors break-all">
+                https://www.linkedin.com/in/endo-yotaro
               </a>
             </CardContent>
           </Card>
