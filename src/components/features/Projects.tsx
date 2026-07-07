@@ -1,9 +1,6 @@
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { Github } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 
 
 const projects = [
@@ -51,54 +48,75 @@ const projects = [
     image: '/images/genai_typing.png',
     githubUrl: 'https://github.com/tasotaso0503/genai-typing'
   },
+  {
+    title: 'NNN株式会社HP',
+    description: '自社HPをコーディングに移行。Next.jsでサイトを構築し、Lighthouseの点数向上に繋がった。',
+    tech: ['Next.js', 'Vercel'],
+    image: '/images/NNN_HP.png',
+    URL: 'https://www.threen.jp'
+  },
 ];
 
 export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-900 via-sky-700 to-blue-700 bg-clip-text text-transparent">プロジェクト</h2>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">プロジェクト</h2>
+          <div className="mt-5 mx-auto h-1 w-16 rounded-full bg-gradient-to-r from-blue-800 to-amber-400" />
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden border-slate-200/70 shadow-sm hover:shadow-2xl hover:shadow-sky-500/10 transition-all duration-300 hover:-translate-y-1">
-              <div className="relative w-full h-48"> {/* 画像をコンテナで囲む */}
+          {projects.map((project) => (
+            <article
+              key={project.title}
+              className="group flex flex-col overflow-hidden rounded-lg bg-white border border-slate-200 hover:border-blue-300 transition-colors duration-300"
+            >
+              <div className="relative w-full h-48 overflow-hidden border-b border-slate-200">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  style={{ objectFit: 'cover' }} // objectFit="cover" の代わり
+                  style={{ objectFit: 'cover' }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </div>
 
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-slate-800">{project.title}</h3>
-                <p className="text-slate-600 mb-4 text-sm leading-relaxed">
+              <div className="flex flex-col flex-grow p-6">
+                <p className="min-h-8 text-xs font-medium tracking-wide text-blue-800">
+                  {project.tech.join(' · ')}
+                </p>
+                <h3 className="mt-2 text-lg font-semibold text-slate-900">
+                  {project.title}
+                </h3>
+                <p className="mt-2 text-[15px] text-slate-600 leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, techIndex) => (
-                    <Badge
-                      key={techIndex}
-                      variant="secondary"
-                      className="bg-sky-50 text-sky-700 hover:bg-sky-100 border border-sky-100"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-                <div className="flex space-x-3 mt-auto">
-                  {project.githubUrl && (
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2" />
-                        GitHub
-                      </a>
-                    </Button>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
+
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-700 underline-offset-4 hover:underline hover:text-blue-900 transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    GitHub
+                  </a>
+                )}
+                {project.URL && (
+                  <a
+                    href={project.URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-700 underline-offset-4 hover:underline hover:text-blue-900 transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    サイトを見る
+                  </a>
+                )}
+              </div>
+            </article>
           ))}
         </div>
       </div>
