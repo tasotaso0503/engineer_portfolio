@@ -1,18 +1,4 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-// import { Button } from '@/components/ui/button';
-import {
-  // ArrowRight,
-  Monitor,
-  Server,
-  Cloud,
-  Database,
-  Code,
-  Container,
-  Github,
-  Workflow,
-  Mountain,
-} from 'lucide-react';
 
 // スキルデータ
 const skillCategories = [
@@ -22,17 +8,14 @@ const skillCategories = [
       {
         name: 'HTML / CSS',
         description: '実務の開発で使用。Tailwind CSSを使用してレスポンシブなどの対応もモダンに開発可能です。',
-        icon: <Code className="w-6 h-6" />
       },
       {
         name: 'JavaScript / TypeScript',
         description: '実務の開発で使用。型安全なコード設計と保守性の向上に貢献できます。',
-        icon: <Monitor className="w-6 h-6" />
       },
       {
         name: 'React / Next.js',
         description: '実務でのWebアプリ開発のメイン技術。CSR/SSG/SSR/ISRを理解し、パフォーマンスを意識した開発が可能です。',
-        icon: <Monitor className="w-6 h-6" />
       },
     ]
   },
@@ -42,17 +25,14 @@ const skillCategories = [
       {
         name: 'Python (Flask / Django / FastAPI)',
         description: 'LangChain / LangGraphを用いたAI Agent開発や、API開発の豊富な実務経験があります。',
-        icon: <Server className="w-6 h-6" />
       },
       {
         name: 'Node.js（Express.js, NestJS）',
         description: 'LangGraphを用いたAgent開発やAPI開発の経験があります。',
-        icon: <Server className="w-6 h-6" />
       },
       {
         name: 'Go (Gin)',
         description: 'API開発や並行処理などの個人開発経験あり。求人サイトの実装で使用予定です。',
-        icon: <Server className="w-6 h-6" />
       },
     ],
   },
@@ -62,17 +42,14 @@ const skillCategories = [
       {
         name: 'AWS',
         description: 'EC2, S3, RDS, App Runner, Lambdaなど基本的なサービスを組み合わせたインフラ設計・構築の実務経験があります。',
-        icon: <Cloud className="w-6 h-6" />
       },
       {
         name: 'Vercel',
         description: 'RedisやEdge Configなどの各種設定やデプロイ・CI/CDパイプライン構築が可能です。',
-        icon: <Cloud className="w-6 h-6" />
       },
       {
         name: 'Heroku',
         description: '各種PaaS/IaaSへのデプロイ・CI/CDパイプライン構築が可能です。',
-        icon: <Cloud className="w-6 h-6" />
       }
     ]
   },
@@ -82,17 +59,14 @@ const skillCategories = [
       {
         name: 'PostgreSQL',
         description: 'DB設計からSQLチューニングまで対応可能。RDBの基本的なトランザクション管理を理解しています。',
-        icon: <Database className="w-6 h-6" />
       },
       {
         name: 'MySQL',
         description: 'DB設計からSQLチューニングまで対応可能。RDBの基本的なトランザクション管理を理解しています。',
-        icon: <Database className="w-6 h-6" />
       },
       {
         name: 'SQLite',
         description: 'DB設計からSQLチューニングまで対応可能。RDBの基本的なトランザクション管理を理解しています。',
-        icon: <Database className="w-6 h-6" />
       }
     ]
   },
@@ -100,24 +74,20 @@ const skillCategories = [
     category: 'その他',
     skills: [
       {
-        name: 'Docker',
+        name: 'Docker / Docker Compose',
         description: 'コンテナ化による開発環境の統一や、各種PaaS/IaaSへのデプロイが可能です。',
-        icon: <Container className="w-6 h-6" />
       },
       {
         name: 'Git / GitHub',
         description: '基本的なコマンド操作とGUI上からの操作が可能。',
-        icon: <Github className="w-6 h-6" />
       },
       {
         name: 'GitHub Actions',
         description: '基本的なコマンド操作とGUI上からの操作が可能。',
-        icon: <Workflow className="w-6 h-6" />
       },
       {
         name: 'Terraform',
         description: '基本的なコード記述やコマンド操作が可能。',
-        icon: <Mountain className="w-6 h-6" />
       },
     ]
   }
@@ -126,57 +96,53 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section id="skills" className="py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* セクションタイトル */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-slate-900 via-sky-700 to-blue-700 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
             スキル
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <div className="mt-5 mb-6 mx-auto h-1 w-16 rounded-full bg-gradient-to-r from-blue-800 to-amber-400" />
+          <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
             私が実務で使用してきた主要な技術スタックです。
+            <br />
             フロントエンドからインフラまで幅広く対応可能です。
           </p>
         </div>
 
         {/* カテゴリーごとに表示 */}
-        <div className="space-y-16">
-          {skillCategories.map((categoryGroup) => (
-            <div key={categoryGroup.category}>
+        <div>
+          {skillCategories.map((categoryGroup, categoryIndex) => (
+            <div
+              key={categoryGroup.category}
+              className="grid md:grid-cols-[220px_1fr] gap-x-12 gap-y-8 py-12 border-t border-slate-200 first:border-t-0 first:pt-0 last:pb-0"
+            >
 
               {/* カテゴリーの小見出し */}
-              <h3 className="text-2xl font-semibold mb-8 text-slate-800 text-center md:text-left">
-                {categoryGroup.category}
-              </h3>
-
-              {/* スキルカードのグリッド */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {categoryGroup.skills.map((skill, index) => (
-                  <Card key={index} className="border-slate-200/70 shadow-sm hover:shadow-xl hover:shadow-sky-500/10 hover:-translate-y-0.5 transition-all duration-300 flex flex-col">
-                    <CardHeader>
-                      <div className="flex items-center gap-4">
-                        <div className="p-3 rounded-full bg-gradient-to-br from-sky-100 to-blue-100 text-sky-600 ring-1 ring-sky-200/60">
-                          {skill.icon}
-                        </div>
-                        <CardTitle className="text-lg font-semibold text-slate-800">{skill.name}</CardTitle>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="flex-grow">
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        {skill.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
+              <div className="flex items-baseline gap-3">
+                <span className="text-xs font-semibold tracking-[0.2em] text-amber-500">
+                  {String(categoryIndex + 1).padStart(2, '0')}
+                </span>
+                <h3 className="text-lg md:text-xl font-semibold text-slate-900">
+                  {categoryGroup.category}
+                </h3>
               </div>
 
-              {/* <div className="mt-12 text-center">
-                <Button variant="outline" size="lg" className="rounded-full">
-                  {categoryGroup.category}のスキルをすべて見る
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </div> */}
+              {/* スキルのリスト */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+                {categoryGroup.skills.map((skill) => (
+                  <div key={skill.name}>
+                    <h4 className="font-semibold text-slate-900 pb-2.5 mb-3 border-b border-slate-200">
+                      {skill.name}
+                    </h4>
+                    <p className="text-[15px] text-slate-600 leading-relaxed">
+                      {skill.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
 
             </div>
           ))}

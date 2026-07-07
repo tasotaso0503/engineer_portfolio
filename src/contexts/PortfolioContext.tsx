@@ -22,12 +22,25 @@ export default function PortfolioProvider({ children }: { children: ReactNode })
 
   // スクロール監視ロジック
   useEffect(() => {
+    const sectionIds = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // TODO: ここにスクロール位置に応じて activeSection を更新するロジックを追加できます
+      // ビューポート上部から1/3の位置を基準に、現在表示中のセクションを判定する
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      let currentSection = sectionIds[0];
+      for (const id of sectionIds) {
+        const element = document.getElementById(id);
+        if (element && element.offsetTop <= scrollPosition) {
+          currentSection = id;
+        }
+      }
+      setActiveSection(currentSection);
     };
-    window.addEventListener('scroll', handleScroll);
+
+    handleScroll(); // 初期表示時（リロードで途中位置から始まる場合）にも反映する
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

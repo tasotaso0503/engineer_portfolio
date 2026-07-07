@@ -1,17 +1,27 @@
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, MapPin } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'ソフトウェアエンジニア',
+    title: '取締役CPO / ソフトウェアエンジニア',
     company: 'NNN株式会社',
     period: '2024.09 - 現在',
     location: '東京',
     description: [
-      '様々なWebフレームワークを使用したWebアプリケーションの設計・開発',
-      'AWSやVercel、Herokuなどのクラウドインフラの構築・運用',
-      'クライアントへのヒアリングによる要件抽出や営業'
+      'AI Agentを含んだアプリケーションの要件定義・設計・開発・インフラ構築など',
+      'エンジニア採用の面接官や人事など',
+      'クライアントへのヒアリングによる要件抽出や営業など'
+    ]
+  },
+  {
+    title: '執行役員 / PM / エンジニア',
+    company: '株式会社Timeless',
+    period: '2024.12 - 現在',
+    location: '東京',
+    description: [
+      '映像制作のプロジェクトにおけるプロジェクトKPI管理やプロジェクト進行',
+      '取引先に対する営業やスケジュールなどの調整業務',
+      '社内のシステムの整備'
     ]
   },
   {
@@ -40,39 +50,41 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-gradient-to-b from-white to-slate-50">
+    <section id="experience" className="py-20 bg-slate-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-900 via-sky-700 to-blue-700 bg-clip-text text-transparent">職歴</h2>
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <Card key={index} className="border-slate-200/70 shadow-sm hover:shadow-lg hover:shadow-sky-500/10 transition-shadow">
-              <CardContent className="p-6">
-                <div className="md:flex md:justify-between md:items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-1 bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">{exp.title}</h3>
-                    <p className="text-slate-700 font-medium">{exp.company}</p>
-                  </div>
-                  <div className="text-slate-500 text-sm mt-2 md:mt-0">
-                    <div className="flex items-center mb-1">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {exp.period}
-                    </div>
-                    <div className="flex items-center">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      {exp.location}
-                    </div>
-                  </div>
-                </div>
-                <ul className="space-y-2">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">職歴</h2>
+          <div className="mt-5 mx-auto h-1 w-16 rounded-full bg-gradient-to-r from-blue-800 to-amber-400" />
+        </div>
+        <div>
+          {experiences.map((exp) => (
+            <div
+              key={exp.company}
+              className="grid md:grid-cols-[200px_1fr] gap-x-12 gap-y-3 py-10 border-t border-slate-200 first:border-t-0 first:pt-0 last:pb-0"
+            >
+              <div>
+                <p className="flex items-center text-sm font-semibold text-slate-900">
+                  <Calendar className="w-4 h-4 mr-2 text-blue-700" />
+                  {exp.period}
+                </p>
+                <p className="flex items-center text-sm text-slate-500 mt-2">
+                  <MapPin className="w-4 h-4 mr-2 text-slate-400" />
+                  {exp.location}
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg md:text-xl font-semibold text-blue-900">{exp.title}</h3>
+                <p className="text-[15px] text-slate-700 font-medium mt-1">{exp.company}</p>
+                <ul className="mt-4 space-y-2.5">
                   {exp.description.map((desc, descIndex) => (
-                    <li key={descIndex} className="text-slate-600 flex items-start">
-                      <span className="text-sky-500 mr-2 font-bold">•</span>
+                    <li key={descIndex} className="text-slate-600 text-[15px] flex items-start">
+                      <span className="mr-3 mt-[11px] h-px w-4 bg-amber-400 shrink-0" />
                       {desc}
                     </li>
                   ))}
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
