@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: 'AI Agent統合型 バージョン管理システム',
-    description: '簡易的なGitをPythonで再現し、LangGraphを用いたAIコードレビュー機能を統合。コミット時にローカルLLM（Ollama）が差分を解析し、論理バグを検知した場合はコミットを自動的に拒絶するガードレール機能を実装。',
+    description: '簡易的なGitをPythonで再現し、LangGraphを用いたAIコードレビュー機能を統合。コミット時にローカルLLM（Ollama）が差分を解析し、バグを検知した場合はコミットを自動的に拒絶するガードレール機能を実装。',
     tech: ['Python', 'LangGraph', 'Ollama', 'Pydantic', 'Git'],
     image: '/images/langgraph_git.png',
     githubUrl: 'https://github.com/tasotaso0503/langgraph-git'
@@ -54,6 +54,12 @@ const projects = [
     tech: ['Next.js', 'Vercel'],
     image: '/images/NNN_HP.png',
     URL: 'https://www.threen.jp'
+  },
+  {
+    title: 'AI開発コンサルティング',
+    description: '開発を主事業としない企業に対し、Claude Codeを活用した開発手法やシステム開発全般のコンサルティングを実施。要件定義・設計から実装まで伴走し、内製化と円滑なプロジェクト推進を支援した。',
+    tech: ['Next.js', 'Vercel', 'Supabase', 'Claude Code'],
+    image: '/images/AI_development_consulting.png',
   },
 ];
 
