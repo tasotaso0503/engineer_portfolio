@@ -46,6 +46,7 @@ const projects = [
     description: '言語やフレームワークを選択し、コードのお題をプロンプトとして入力すると、LLMがタイピング練習用のコードを生成し、アプリ内のエディタ部分でタイピング練習ができる機能を実装',
     tech: ['Nuxt.js', 'LangGraph', 'Groq', 'Gemini', 'Redis', 'Vercel'],
     image: '/images/genai_typing.png',
+    URL: 'https://genai-typing-frontend-ebon.vercel.app',
     githubUrl: 'https://github.com/tasotaso0503/genai-typing'
   },
   {

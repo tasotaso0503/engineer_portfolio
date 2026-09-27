@@ -27,12 +27,12 @@ const skillCategories = [
         description: 'LangChain / LangGraphを用いたAI Agent開発や、API開発の豊富な実務経験があります。',
       },
       {
-        name: 'Node.js（Express.js, NestJS）',
-        description: 'LangGraphを用いたAgent開発やAPI開発の経験があります。',
+        name: 'Go (Gin)',
+        description: '自社の求人サイトのバックエンドで使用。個人開発でもAPI開発経験があります。',
       },
       {
-        name: 'Go (Gin)',
-        description: 'API開発や並行処理などの個人開発経験あり。求人サイトの実装で使用予定です。',
+        name: 'Node.js（Express.js, NestJS）',
+        description: 'LangGraphを用いたAgent開発やAPI開発の経験があります。',
       },
     ],
   },
@@ -41,16 +41,16 @@ const skillCategories = [
     skills: [
       {
         name: 'AWS',
-        description: 'EC2, S3, RDS, App Runner, Lambdaなど基本的なサービスを組み合わせたインフラ設計・構築の実務経験があります。',
+        description: 'EC2, ECS, App Runner, Lambda, ALB, S3, RDSなど基本的なサービスを組み合わせたインフラ設計・構築の実務経験があります。',
+      },
+      {
+        name: 'GCP',
+        description: 'Cloud Run, Cloud Tasks, Firestore, Secret Managerなど基本的なサービスを組み合わせたインフラ設計・構築の経験があります。',
       },
       {
         name: 'Vercel',
         description: 'RedisやEdge Configなどの各種設定やデプロイ・CI/CDパイプライン構築が可能です。',
       },
-      {
-        name: 'Heroku',
-        description: '各種PaaS/IaaSへのデプロイ・CI/CDパイプライン構築が可能です。',
-      }
     ]
   },
   {
@@ -83,7 +83,7 @@ const skillCategories = [
       },
       {
         name: 'GitHub Actions',
-        description: '基本的なコマンド操作とGUI上からの操作が可能。',
+        description: '基本的なCI/CD定義とGUI上からの操作が可能。',
       },
       {
         name: 'Terraform',
