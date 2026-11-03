@@ -61,7 +61,14 @@ const projects = [
     description: '開発を主事業としない企業に対し、Claude Codeを活用した開発手法やシステム開発全般のコンサルティングを実施。要件定義・設計から実装まで伴走し、内製化と円滑なプロジェクト推進を支援した。',
     tech: ['Next.js', 'Vercel', 'Supabase', 'Claude Code'],
     image: '/images/AI_development_consulting.png',
-  },
+    },
+    {
+      title: '警備業界特化求人プラットフォーム【ケイビー】',
+      description: '警備会社と求職者のマッチングを行うプラットフォームを作成。CPOとしてビジネス設計から開発全体のPMを担当。',
+      tech: ['Next.js', 'Go', 'AWS', 'Terraform'],
+      image: '/images/KBlogo.svg',
+      URL: 'https://keibee.jp',
+    },
 ];
 
 export default function Projects() {

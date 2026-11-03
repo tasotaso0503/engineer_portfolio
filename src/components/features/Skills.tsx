@@ -28,7 +28,7 @@ const skillCategories = [
       },
       {
         name: 'Go (Gin)',
-        description: '自社の求人サイトのバックエンドで使用。個人開発でもAPI開発経験があります。',
+        description: '自社の求人サイトのバックエンドで使用。大量リクエストを捌くための並行処理や、機械学習モデルの設計などの実務経験あり。',
       },
       {
         name: 'Node.js（Express.js, NestJS）',
@@ -58,15 +58,15 @@ const skillCategories = [
     skills: [
       {
         name: 'PostgreSQL',
-        description: 'DB設計からSQLチューニングまで対応可能。RDBの基本的なトランザクション管理を理解しています。',
+        description: '正規化やインデックスなどの基本を考慮したDB設計と、実行計画を確認しながらのSQLチューニングが可能です。',
       },
       {
         name: 'MySQL',
-        description: 'DB設計からSQLチューニングまで対応可能。RDBの基本的なトランザクション管理を理解しています。',
+        description: '正規化やインデックスなどの基本を考慮したDB設計と、実行計画を確認しながらのSQLチューニングが可能です。',
       },
       {
         name: 'SQLite',
-        description: 'DB設計からSQLチューニングまで対応可能。RDBの基本的なトランザクション管理を理解しています。',
+        description: '正規化やインデックスなどの基本を考慮したDB設計と、実行計画を確認しながらのSQLチューニングが可能です。',
       }
     ]
   },
@@ -79,15 +79,15 @@ const skillCategories = [
       },
       {
         name: 'Git / GitHub',
-        description: '基本的なコマンド操作とGUI上からの操作が可能。',
+        description: '基本的なコマンド操作とGUI上からの操作が可能。ブランチ保護ルールなどの基本的な設定が可能。',
       },
       {
         name: 'GitHub Actions',
-        description: '基本的なCI/CD定義とGUI上からの操作が可能。',
+        description: '基本的なCI/CD定義とGUI上からの操作が可能。preview環境における結合テストの自動化などの経験あり。',
       },
       {
         name: 'Terraform',
-        description: '基本的なコード記述やコマンド操作が可能。',
+        description: ' 複数のマイクロサービス間の連携（ネットワーク・DB設定など）をTerraformでコード化した実務経験があります。',
       },
     ]
   }

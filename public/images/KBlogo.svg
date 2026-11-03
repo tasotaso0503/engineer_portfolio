@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-12d91818-8754-4580-94bc-9ab110db1d9b" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 386.96 274.38">
+  <defs>
+    <style>
+      .uuid-f52e568c-37de-4caa-8c1d-bd5c065a811e {
+        fill: url(#uuid-081a00e4-956a-4daf-947f-3b04811e94dd);
+      }
+
+      .uuid-c868924d-9fab-459a-ae9e-b1a83924c20a {
+        fill: url(#uuid-d327e543-f0eb-4206-9680-72f93b4959c0);
+      }
+
+      .uuid-79184782-93fe-415c-8cdf-2d8956f088ca {
+        fill: url(#uuid-7b169a22-86a5-4182-8fd7-35ed7fe5359b);
+      }
+
+      .uuid-2da0a35f-ee7d-4f5e-af5d-613cad0ef1fa {
+        fill: url(#uuid-630af1e6-7553-4642-9785-f8cfc4afce38);
+      }
+    </style>
+    <linearGradient id="uuid-d327e543-f0eb-4206-9680-72f93b4959c0" data-name="名称未設定グラデーション 4" x1="0" y1="205.79" x2="386.96" y2="205.79" gradientTransform="translate(0 276) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f4cd45"/>
+      <stop offset=".2" stop-color="#efc43f"/>
+      <stop offset=".52" stop-color="#e3ad2f"/>
+      <stop offset=".91" stop-color="#cf8815"/>
+      <stop offset="1" stop-color="#cb7f0f"/>
+    </linearGradient>
+    <linearGradient id="uuid-081a00e4-956a-4daf-947f-3b04811e94dd" data-name="名称未設定グラデーション 4" x1="123.35" y1="32.02" x2="261.07" y2="32.02" xlink:href="#uuid-d327e543-f0eb-4206-9680-72f93b4959c0"/>
+    <linearGradient id="uuid-630af1e6-7553-4642-9785-f8cfc4afce38" data-name="名称未設定グラデーション 4" x1="103.9" y1="101.43" x2="280.53" y2="101.43" xlink:href="#uuid-d327e543-f0eb-4206-9680-72f93b4959c0"/>
+    <linearGradient id="uuid-7b169a22-86a5-4182-8fd7-35ed7fe5359b" data-name="名称未設定グラデーション 4" x1="114.66" y1="202.24" x2="269.78" y2="202.24" xlink:href="#uuid-d327e543-f0eb-4206-9680-72f93b4959c0"/>
+  </defs>
+  <g id="uuid-1eeb8e73-a5d2-4866-9139-6b9a4e5a82aa" data-name="uuid-f2511f16-33a6-4042-b4ee-7b2aecba774c">
+    <path class="uuid-c868924d-9fab-459a-ae9e-b1a83924c20a" d="M386.96,29.52C386.96,136.4,0,136.4,0,29.52s86.62,110.89,193.48,110.89S386.96-77.37,386.96,29.52Z"/>
+    <path class="uuid-f52e568c-37de-4caa-8c1d-bd5c065a811e" d="M261.07,213.57c-17,33.27-68.25,60.81-68.25,60.81,0,0-51.42-27.56-69.47-60.81l70.02,11.49,67.7-11.49Z"/>
+    <path class="uuid-2da0a35f-ee7d-4f5e-af5d-613cad0ef1fa" d="M191.65,156.3c-42.3.07-98.68-42.82-85.91,12.02,1.26,5.39,3.87,23.91,7.25,30.45l79.8,9.97,78.74-9.89c3.09-6.54,4.65-23.46,6.04-28.1,16.87-56.69-41.88-14.52-85.91-14.45h-.01Z"/>
+    <path class="uuid-79184782-93fe-415c-8cdf-2d8956f088ca" d="M192.21,104.13l-3.56-2.02c-73.99-41.91-73.99-53.66-73.99-57.52h14.47c0-.75-.19-1.19-.19-1.2,2.3,5.15,26.99,23.28,63.28,44.09,36.29-20.81,60.97-38.94,63.28-44.09,0,0-.19.44-.19,1.2h14.47c0,3.86,0,15.61-73.99,57.52l-3.56,2.02h-.02Z"/>
+  </g>
+</svg>
